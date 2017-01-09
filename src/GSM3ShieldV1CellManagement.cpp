@@ -124,7 +124,7 @@ void GSM3ShieldV1CellManagement::getLocationContinue()
 		delay(3000);
 		theGSM3ShieldV1ModemCore.setCommandCounter(2);
 		theGSM3ShieldV1ModemCore.genericCommand_rq(PSTR("AT+QENG=1"), false);
-		theGSM3ShieldV1ModemCore.print("\r");
+		theGSM3ShieldV1ModemCore.print('\r');
 		break;
 	case 2:
 		if (theGSM3ShieldV1ModemCore.genericParse_rsp(resp))
@@ -133,7 +133,7 @@ void GSM3ShieldV1CellManagement::getLocationContinue()
 			delay(3000);
 			theGSM3ShieldV1ModemCore.setCommandCounter(3);
 			theGSM3ShieldV1ModemCore.genericCommand_rq(PSTR("AT+QENG?"), false);
-			theGSM3ShieldV1ModemCore.print("\r");
+			theGSM3ShieldV1ModemCore.print('\r');
 		}
 		else theGSM3ShieldV1ModemCore.closeCommand(1);
 		break;
@@ -171,7 +171,7 @@ void GSM3ShieldV1CellManagement::getICCIDContinue()
     case 1:
 		theGSM3ShieldV1ModemCore.setCommandCounter(2);
 		theGSM3ShieldV1ModemCore.genericCommand_rq(PSTR("AT+QCCID"), false);
-		theGSM3ShieldV1ModemCore.print("\r");
+		theGSM3ShieldV1ModemCore.print('\r');
 		break;
 	case 2:
 		if (theGSM3ShieldV1ModemCore.genericParse_rsp(resp))

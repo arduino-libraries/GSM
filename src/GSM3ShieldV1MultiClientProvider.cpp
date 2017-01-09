@@ -490,7 +490,8 @@ int GSM3ShieldV1MultiClientProvider::readSocket()
 	
 	if(theGSM3ShieldV1ModemCore.theBuffer().availableBytes()==0)
 	{
-		Serial.println();Serial.println("*");
+		Serial.println();
+		Serial.println('*');
 		return 0;
 	}
 		

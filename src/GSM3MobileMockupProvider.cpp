@@ -114,7 +114,11 @@ int GSM3MobileMockupProvider::readSMS()
 int GSM3MobileMockupProvider::connectTCPClient(const char* server, int port, int id_socket)
 {
 	Serial.println("GSM3MobileMockupProvider::connectTCPClient()");
-	Serial.print(server);Serial.print(":");Serial.print(port);Serial.print("-");Serial.println(id_socket);
+	Serial.print(server);
+	Serial.print(':');
+	Serial.print(port);
+	Serial.print('-');
+	Serial.println(id_socket);
 }
 
 void GSM3MobileMockupProvider::writeSocket(const uint8_t *buf, size_t size, int id_socket)
