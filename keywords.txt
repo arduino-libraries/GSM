@@ -13,7 +13,7 @@ GSMServer	KEYWORD1	GSMServerConstructor
 GSMModem	KEYWORD1	GSMModemConstructor
 GSMScanner	KEYWORD1	GSMScannerConstructor
 GSMPIN	KEYWORD1	GSMPINConstructor
-GSMBand KEYWORD1	GSMBandConstructor
+GSMBand	KEYWORD1	GSMBandConstructor
 
 #######################################
 # Methods and Functions 
