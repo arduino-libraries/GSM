@@ -40,7 +40,7 @@ void setup() {
   }
 
   // connection state
-  boolean notConnected = true;
+  bool notConnected = true;
 
   // Start GSM shield
   // If your SIM has PIN, pass it as a parameter of begin() in quotes

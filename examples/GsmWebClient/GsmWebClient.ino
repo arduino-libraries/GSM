@@ -46,7 +46,7 @@ void setup() {
 
   Serial.println("Starting Arduino web client.");
   // connection state
-  boolean notConnected = true;
+  bool notConnected = true;
 
   // After starting the modem with GSM.begin()
   // attach the shield to the GPRS network with the APN, login and password

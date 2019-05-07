@@ -55,7 +55,7 @@ void loop() {
   Serial.print("\nConfiguring band ");
   Serial.println(newBandName);
   // Change the band
-  boolean operationSuccess;
+  bool operationSuccess;
   operationSuccess = band.setBand(newBandName);
   // Tell the user if the operation was OK
   if (operationSuccess) {
