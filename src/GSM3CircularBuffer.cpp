@@ -268,7 +268,7 @@ void GSM3CircularBuffer::debugBuffer()
 	byte t1=tail;
 	Serial.println();
 	Serial.print(h1);
-	Serial.print(" ");
+	Serial.print(' ');
 	Serial.print(t1);
 	Serial.print('>');
 	for(byte b=h1; b!=t1; b=(b+1)& __BUFFERMASK__)

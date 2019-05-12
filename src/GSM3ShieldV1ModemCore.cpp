@@ -120,7 +120,7 @@ void GSM3ShieldV1ModemCore::genericCommand_rqc(const char* str, bool addCR)
 	theBuffer().flush();
 	print(str);
 	if(addCR)
-		print("\r");
+		print('\r');
 }
 
 // If we are not debugging, lets manage data in interrupt time
@@ -203,7 +203,7 @@ size_t GSM3ShieldV1ModemCore::writePGM(PGM_P str, bool CR)
 		i++;
 	} while (c!=0);
 	if(CR)
-		print("\r");
+		print('\r');
 		
 	return 1;
 }

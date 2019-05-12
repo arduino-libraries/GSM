@@ -99,7 +99,7 @@ void GSM3ShieldV1SMSProvider::endSMSContinue()
     case 1:
 		theGSM3ShieldV1ModemCore.setCommandCounter(2);
 		theGSM3ShieldV1ModemCore.write(26);
-		theGSM3ShieldV1ModemCore.print("\r");
+		theGSM3ShieldV1ModemCore.print('\r');
 		break;
 	case 2:
 		if(theGSM3ShieldV1ModemCore.genericParse_rsp(resp))
@@ -284,7 +284,7 @@ void GSM3ShieldV1SMSProvider::flushSMSContinue()
 		theGSM3ShieldV1ModemCore.setCommandCounter(2);
 		theGSM3ShieldV1ModemCore.genericCommand_rq(PSTR("AT+CMGD="), false);
 		theGSM3ShieldV1ModemCore.print(idSMS);
-		theGSM3ShieldV1ModemCore.print("\r");
+		theGSM3ShieldV1ModemCore.print('\r');
 		break;
 	case 2:
 		if(theGSM3ShieldV1ModemCore.genericParse_rsp(resp))
