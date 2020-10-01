@@ -8,7 +8,7 @@ This file is part of the GSM3 communications library for Arduino
 -- TCP/IP connections
 -- HTTP basic clients
 
-This library has been developed by Telefónica Digital - PDI -
+This library has been developed by Telefï¿½nica Digital - PDI -
 - Physical Internet Lab, as part as its collaboration with
 Arduino and the Open Hardware Community. 
 
@@ -187,11 +187,18 @@ size_t GSM3SoftSerial::write(uint8_t c)
 		return 0;
 
 	// Characters to be escaped under XON/XOFF control with Quectel
+	if(c==0x5f)
+	{
+		this->finalWrite(0x77);
+		return this->finalWrite(0x8a);
+	}
+
 	if(c==0x11)
 	{
 		this->finalWrite(0x77);
 		return this->finalWrite(0xEE);
 	}
+
 
 	if(c==0x13)
 	{
